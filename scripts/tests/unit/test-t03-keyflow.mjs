@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {templateRegistry,requirePreviewTemplate,requireProductionTemplate} from '../../../src/templates/registry.mjs';
+import {keyflowLayout} from '../../../src/templates/t03-keyflow/layout.mjs';
+import {chunksFor,wrapKeyflow,safeWidthForLine,wrapKeyflowByVisibleLine,stateAt} from '../../../src/templates/t03-keyflow/model.mjs';
+import fs from 'node:fs';
+assert.deepEqual(templateRegistry['t03-keyflow'].ratios,['9:16','16:9']);
+assert.equal(templateRegistry['t03-keyflow'].productionEnabled,true);
+for (const ratio of ['9:16','16:9']) {
+  assert.equal(requireProductionTemplate('t03-keyflow',ratio).id,'t03-keyflow');
+  assert.equal(requireProductionTemplate('t03-keyflow',ratio,{allowCandidate:true}).id,'t03-keyflow');
+}
+assert.throws(()=>requirePreviewTemplate('t03-keyflow','1:1'),/not enabled/);
+assert.throws(()=>requireProductionTemplate('t03-keyflow','1:1'),/not enabled/);
+assert.equal(keyflowLayout('9:16').windowInset,4);
+const measured=(s)=>s.length*10;
+assert.deepEqual(wrapKeyflow('Keyflow typing system',measured,80),['Keyflow','typing','system']);
+assert.deepEqual(chunksFor('abcdefghi').map(chunk=>chunk.length),[2,3,2,2]);
+assert.equal(safeWidthForLine(0,3,1000,'16:9',[1,750/790,690/790]),1000);
+assert.equal(safeWidthForLine(1,3,1000,'16:9',[1,750/790,690/790]),750/790*1000);
+assert.equal(safeWidthForLine(2,3,1000,'16:9',[1,750/790,690/790]),690/790*1000);
+const byLine=wrapKeyflowByVisibleLine('上部文本应该完整使用输入区宽度。The middle region remains broad before the final safe zone narrows near keyboard. '.repeat(5),measured,{ratio:'16:9',textWidth:1000,bodyHeight:380,lineHeight:47,maxSafeVisibleLines:3,safeLineWidthFactors:[1,750/790,690/790]});
+assert.ok(byLine.lines.length>1);
+const timeline={ratio:'16:9',messages:[{text:'Keyflow '},{text:'安全区域的长文本会在键盘遮挡之前滚动。'}],durationInFrames:240,holdFrames:24};
+const L={...keyflowLayout('16:9'),ratio:'16:9'}; const early=stateAt(timeline,L,0), late=stateAt(timeline,L,216);
+assert.equal(early.visible,''); assert.ok(late.lines.length>0); assert.ok(late.lines.length<=3); assert.equal(late.capacity,3); assert.equal(stateAt(timeline,L,239).visualFrame,216);
+const preview=fs.readFileSync(new URL('../../cli/preview-job.mjs',import.meta.url),'utf8');
+const render=fs.readFileSync(new URL('../../cli/render-job.mjs',import.meta.url),'utf8');
+assert.match(preview,/\['t02-paper-dialogue','t03-keyflow'\]\.includes\(template\)/);
+assert.match(render,/\['t02-paper-dialogue','t03-keyflow'\]\.includes\(template\)/);
+console.log('T03 Keyflow static contract: PASS');

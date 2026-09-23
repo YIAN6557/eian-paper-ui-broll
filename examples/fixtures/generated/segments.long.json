@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "fps": 24,
+  "continuityMode": "global-frame-slice",
+  "sourceDurationInFrames": 277,
+  "minPartFrames": 72,
+  "maxPartFrames": 192,
+  "targetPartFrames": 150,
+  "partCount": 2,
+  "parts": [
+    {
+      "part": 1,
+      "globalStartFrame": 0,
+      "globalEndFrameExclusive": 159,
+      "durationInFrames": 159,
+      "durationSeconds": 6.625,
+      "startsWithCarryOver": false,
+      "isFinal": false,
+      "cutReason": "turn-start",
+      "stateAtStart": {
+        "visibleMessageIds": [
+          "m1"
+        ],
+        "activeTypingMessageId": null,
+        "activeRevealMessageId": null
+      }
+    },
+    {
+      "part": 2,
+      "globalStartFrame": 159,
+      "globalEndFrameExclusive": 277,
+      "durationInFrames": 118,
+      "durationSeconds": 4.917,
+      "startsWithCarryOver": true,
+      "isFinal": true,
+      "cutReason": "timeline-end",
+      "stateAtStart": {
+        "visibleMessageIds": [
+          "m1",
+          "m2",
+          "m3",
+          "m4",
+          "m5",
+          "m6",
+          "m7"
+        ],
+        "activeTypingMessageId": null,
+        "activeRevealMessageId": null
+      }
+    }
+  ]
+}

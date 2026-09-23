@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eian.local/eian-paper-ui-broll/timeline.schema.json",
+  "title": "eian-paper-ui-broll Timeline v1",
+  "type": "object",
+  "required": ["schemaVersion", "ratio", "fps", "template", "background", "messages", "holdFrames", "durationInFrames"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "ratio": {"enum": ["9:16", "16:9", "1:1"]},
+    "fps": {"const": 24},
+    "template": {"type": "string"},
+    "background": {"type": "string"},
+    "taskText": {"type": "string"},
+    "taskMeta": {"type": "string"},
+    "statusDescription": {"type": "string"},
+    "bottomStatusDescription": {"type": "string"},
+    "holdFrames": {"type": "integer", "minimum": 24, "maximum": 24},
+    "durationInFrames": {"type": "integer", "minimum": 1},
+    "messages": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "speaker", "text"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "speaker": {"enum": ["user", "assistant"]},
+          "name": {"type": ["string", "null"]},
+          "text": {"type": "string", "minLength": 1},
+          "startFrame": {"type": "integer", "minimum": 0},
+          "enterFrames": {"type": "integer", "minimum": 1},
+          "typingStartFrame": {"type": "integer", "minimum": 0},
+          "typingFrames": {"type": "integer", "minimum": 12, "maximum": 24},
+          "revealStartFrame": {"type": "integer", "minimum": 0},
+          "revealFrames": {"type": "integer", "minimum": 12}
+        },
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {"properties": {"speaker": {"const": "user"}}},
+            "then": {"required": ["startFrame", "enterFrames"]}
+          },
+          {
+            "if": {"properties": {"speaker": {"const": "assistant"}}},
+            "then": {"required": ["typingStartFrame", "typingFrames", "revealStartFrame", "revealFrames"]}
+          }
+        ]
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "generatedBy": {"type": "string"},
+        "messageCount": {"type": "integer", "minimum": 0},
+        "requiresSegmentation": {"type": "boolean"},
+        "maxPartFrames": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

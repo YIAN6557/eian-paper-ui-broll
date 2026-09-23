@@ -1,0 +1,6 @@
+interface:
+  display_name: "Eian Paper UI B-roll"
+  short_description: "将对话制作成经 Preview 审核的 Paper UI 视频"
+  default_prompt: "Use $eian-paper-ui-broll to turn my user/AI dialogue into a Paper UI motion video."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "1.0",
+  "ratio": "9:16",
+  "fps": 24,
+  "template": "t01-reference-research-console",
+  "background": "b01-matte-paper",
+  "taskText": "Turn a conversation into a Paper UI B-roll video.",
+  "taskMeta": "20 MIN ELAPSED",
+  "statusDescription": "Analyzing conversation",
+  "bottomStatusDescription": "Response ready",
+  "messages": [
+    {
+      "id": "m1",
+      "speaker": "user",
+      "name": null,
+      "text": "我可以用这个 Skill 做什么？",
+      "startFrame": 0,
+      "enterFrames": 6
+    },
+    {
+      "id": "m2",
+      "speaker": "assistant",
+      "name": null,
+      "text": "提供一段对话，它会自动生成一条 Paper UI 风格的动态 B-roll 视频。",
+      "typingStartFrame": 13,
+      "typingFrames": 15,
+      "revealStartFrame": 28,
+      "revealFrames": 12
+    },
+    {
+      "id": "m3",
+      "speaker": "user",
+      "name": null,
+      "text": "我还需要自己设计画面和动画吗？",
+      "startFrame": 53,
+      "enterFrames": 6
+    },
+    {
+      "id": "m4",
+      "speaker": "assistant",
+      "name": null,
+      "text": "不需要。Skill 会自动处理对话布局、气泡动画、typing、文字出现节奏和最终 MP4 渲染。",
+      "typingStartFrame": 66,
+      "typingFrames": 15,
+      "revealStartFrame": 81,
+      "revealFrames": 12
+    },
+    {
+      "id": "m5",
+      "speaker": "user",
+      "name": null,
+      "text": "如果我的对话很长怎么办？",
+      "startFrame": 106,
+      "enterFrames": 6
+    },
+    {
+      "id": "m6",
+      "speaker": "assistant",
+      "name": null,
+      "text": "它会按照 3 到 8 秒的节奏自动拆成多个连续片段，而不是把所有内容硬塞进一个画面。",
+      "typingStartFrame": 119,
+      "typingFrames": 15,
+      "revealStartFrame": 134,
+      "revealFrames": 12
+    },
+    {
+      "id": "m7",
+      "speaker": "user",
+      "name": null,
+      "text": "拆开以后前后会不会断掉？",
+      "startFrame": 159,
+      "enterFrames": 6
+    },
+    {
+      "id": "m8",
+      "speaker": "assistant",
+      "name": null,
+      "text": "不会。后一个片段会继承前一个片段的卡片、消息位置、滚动状态和正在进行的动画，所以看起来仍然是一条连续的视频。",
+      "typingStartFrame": 172,
+      "typingFrames": 15,
+      "revealStartFrame": 187,
+      "revealFrames": 13
+    },
+    {
+      "id": "m9",
+      "speaker": "user",
+      "name": null,
+      "text": "最后我会拿到什么文件？",
+      "startFrame": 213,
+      "enterFrames": 6
+    },
+    {
+      "id": "m10",
+      "speaker": "assistant",
+      "name": null,
+      "text": "每个片段都会输出成独立的 H.264 MP4 文件，方便直接作为 B-roll 放进你的剪辑里。",
+      "typingStartFrame": 226,
+      "typingFrames": 15,
+      "revealStartFrame": 241,
+      "revealFrames": 12
+    }
+  ],
+  "holdFrames": 24,
+  "durationInFrames": 277,
+  "meta": {
+    "generatedBy": "eian-paper-ui-broll/dialogue-to-timeline",
+    "messageCount": 10,
+    "requiresSegmentation": true,
+    "maxPartFrames": 192
+  }
+}

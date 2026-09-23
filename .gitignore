@@ -1,0 +1,11 @@
+node_modules/
+temp/
+public/runtime-backgrounds/
+validation/**/bundle/
+validation/**/output/
+validation/**/tail-static-frames/
+validation/**/t01-after/
+*.mp4
+*.mov
+*.webm
+.DS_Store

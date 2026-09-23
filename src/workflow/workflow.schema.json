@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://eian.local/eian-paper-ui-broll/workflow.schema.json",
+  "title": "eian-paper-ui-broll Workflow State v1.1",
+  "type": "object",
+  "required": ["schemaVersion", "jobId", "phase", "input", "assets", "recommendation", "selection", "locks", "visual", "preview", "parts", "events"],
+  "properties": {
+    "schemaVersion": {"const": "1.1"},
+    "jobId": {"type": "string"},
+    "phase": {"type": "string"},
+    "selection": {
+      "type": "object",
+      "required": ["template", "background", "backgroundAnchor"],
+      "properties": {
+        "template": {"type": ["string", "null"]},
+        "background": {"type": "string"},
+        "backgroundAnchor": {"enum": ["top", "center", "bottom"]},
+        "backgroundUser": {"type": ["object", "null"]}
+      }
+    },
+    "locks": {
+      "type": "object",
+      "required": ["contentLocked", "templateLocked", "backgroundLocked", "backgroundLockedStateId", "continuityGuarantee", "partTemplateOverrides"],
+      "properties": {
+        "contentLocked": {"type": "boolean"},
+        "templateLocked": {"type": "boolean"},
+        "templateLockedAtPart": {"type": ["integer", "null"]},
+        "backgroundLocked": {"type": "boolean"},
+        "backgroundLockedStateId": {"type": ["string", "null"]},
+        "continuityGuarantee": {"type": "boolean"},
+        "partTemplateOverrides": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    },
+    "visual": {
+      "type": "object",
+      "required": ["revision", "backgroundRevision", "draftVisualConfig", "backgroundRenderStateStatus"],
+      "properties": {
+        "revision": {"type": "integer", "minimum": 1},
+        "backgroundRevision": {"type": "integer", "minimum": 1},
+        "draftVisualConfig": {"type": ["object", "null"]},
+        "backgroundRenderState": {"type": ["object", "null"]},
+        "backgroundRenderStateStatus": {"enum": ["not_resolved", "resolved", "invalid"]},
+        "previewState": {"type": ["object", "null"]},
+        "productionVisualLock": {"type": ["object", "null"]},
+        "renderManifest": {"type": ["object", "null"]}
+      }
+    },
+    "parts": {"type": "array", "minItems": 1}
+  },
+  "additionalProperties": true
+}

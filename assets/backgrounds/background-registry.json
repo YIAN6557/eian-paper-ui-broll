@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "backgrounds": [
+    {
+      "id": "BG-S01",
+      "aliases": ["solid-neutral"],
+      "type": "solid",
+      "name": "Solid Neutral",
+      "source": "builtin",
+      "color": "#F3EFE7",
+      "enabled": true
+    },
+    {
+      "id": "BG-P01",
+      "aliases": ["b01-matte-paper", "paper-neutral"],
+      "type": "paper",
+      "name": "Paper Neutral",
+      "source": "builtin",
+      "asset": "assets/backgrounds/paper-neutral-01.png",
+      "publicRelativePath": "backgrounds/paper-neutral-01.png",
+      "defaultAnchor": "center",
+      "legacyT01Baseline": true,
+      "enabled": true
+    },
+    {
+      "id": "BG-P02",
+      "aliases": ["paper-warm"],
+      "type": "paper",
+      "name": "Paper Warm",
+      "source": "builtin",
+      "asset": "assets/backgrounds/paper-warm-01.png",
+      "publicRelativePath": "backgrounds/paper-warm-01.png",
+      "defaultAnchor": "center",
+      "enabled": true
+    },
+    {
+      "id": "BG-P03",
+      "aliases": ["paper-cool"],
+      "type": "paper",
+      "name": "Paper Cool",
+      "source": "builtin",
+      "asset": "assets/backgrounds/paper-cool-01.png",
+      "publicRelativePath": "backgrounds/paper-cool-01.png",
+      "defaultAnchor": "center",
+      "enabled": true
+    }
+  ]
+}

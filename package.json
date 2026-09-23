@@ -1,0 +1,39 @@
+{
+  "name": "eian-paper-ui-broll",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "preview": "node scripts/cli/preview.mjs",
+    "render": "node scripts/cli/render.mjs",
+    "cleanup": "node scripts/maintenance/cleanup.mjs",
+    "compile:dialogue": "node scripts/cli/dialogue-to-timeline.mjs",
+    "test:parser": "node scripts/tests/unit/test-dialogue-parser.mjs",
+    "segment:timeline": "node scripts/cli/segment-timeline.mjs",
+    "test:segmentation": "node scripts/tests/unit/test-segmentation.mjs",
+    "prepare:job": "node scripts/cli/prepare-job.mjs",
+    "workflow": "node scripts/cli/workflow.mjs",
+    "test:workflow": "node scripts/tests/unit/test-workflow.mjs",
+    "preview:job": "node scripts/cli/preview-job.mjs",
+    "render:job": "node scripts/cli/render-job.mjs",
+    "doctor": "node scripts/maintenance/doctor.mjs",
+    "finalize:job": "node scripts/cli/finalize-job.mjs",
+    "test:stage3-background": "node scripts/tests/unit/test-stage3-background.mjs",
+    "validate:production": "node scripts/validation/production/validate-production.mjs",
+    "test:stage4-ratios": "node scripts/tests/unit/test-stage4-ratios.mjs",
+    "validate:stage4": "node scripts/validation/production/validate-stage4-ratios.mjs",
+    "test:user-bubble-width": "node scripts/tests/unit/test-user-bubble-width.mjs",
+    "test:final-hold": "node scripts/tests/unit/test-final-hold.mjs",
+    "test:t03-keyflow": "node scripts/tests/unit/test-t03-keyflow.mjs",
+    "validate:t03": "node scripts/validation/production/validate-t03-keyflow.mjs",
+    "gate:check": "sh scripts/maintenance/dependency-gate.sh check",
+    "gate:install": "sh scripts/maintenance/dependency-gate.sh install"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "remotion": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

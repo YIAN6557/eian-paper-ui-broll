@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "ratio": "9:16",
+  "fps": 24,
+  "template": "t01-reference-research-console",
+  "background": "b01-matte-paper",
+  "taskText": "Explore eian-paper-ui-broll — Turn a conversation into a Paper UI B-roll video.",
+  "taskMeta": "20 MIN ELAPSED",
+  "statusDescription": "Analyzing conversation",
+  "bottomStatusDescription": "Response ready",
+  "messages": [
+    {
+      "id": "m1",
+      "speaker": "user",
+      "name": null,
+      "text": "我可以用这个 Skill 做什么？",
+      "startFrame": 0,
+      "enterFrames": 6
+    },
+    {
+      "id": "m2",
+      "speaker": "assistant",
+      "name": null,
+      "text": "提供一段对话，它会自动生成 Paper UI 风格的 B-roll 视频。",
+      "typingStartFrame": 13,
+      "typingFrames": 15,
+      "revealStartFrame": 28,
+      "revealFrames": 12
+    },
+    {
+      "id": "m3",
+      "speaker": "user",
+      "name": null,
+      "text": "我还需要自己设计动画吗？",
+      "startFrame": 53,
+      "enterFrames": 6
+    },
+    {
+      "id": "m4",
+      "speaker": "assistant",
+      "name": null,
+      "text": "不需要。Skill 会自动处理布局、typing、文字出现节奏和最终 MP4 渲染。",
+      "typingStartFrame": 66,
+      "typingFrames": 15,
+      "revealStartFrame": 81,
+      "revealFrames": 12
+    }
+  ],
+  "holdFrames": 24,
+  "durationInFrames": 117,
+  "meta": {
+    "generatedBy": "eian-paper-ui-broll/dialogue-to-timeline",
+    "messageCount": 4,
+    "requiresSegmentation": false,
+    "maxPartFrames": 192
+  }
+}

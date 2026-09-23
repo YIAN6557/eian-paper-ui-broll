@@ -1,0 +1,50 @@
+{
+  "ratio": "9:16",
+  "fps": 24,
+  "template": "t01-reference-research-console",
+  "background": "b01-matte-paper",
+  "taskText": "Explore eian-paper-ui-broll — Turn a simple conversation into a polished Paper UI B-roll video.",
+  "taskMeta": "20 MIN ELAPSED",
+  "messages": [
+    {
+      "id": "m1",
+      "speaker": "user",
+      "name": null,
+      "text": "What can I create with this skill?",
+      "startFrame": 0,
+      "enterFrames": 1
+    },
+    {
+      "id": "m2",
+      "speaker": "assistant",
+      "name": null,
+      "text": "Just provide a conversation, and the skill will turn it into a Paper UI-style B-roll video automatically.",
+      "typingStartFrame": 12,
+      "typingFrames": 15,
+      "revealStartFrame": 27,
+      "revealFrames": 24
+    },
+    {
+      "id": "m3",
+      "speaker": "user",
+      "name": null,
+      "text": "Do I need to design the visuals or animation myself?",
+      "startFrame": 70,
+      "enterFrames": 6
+    },
+    {
+      "id": "m4",
+      "speaker": "assistant",
+      "name": null,
+      "text": "No. The skill handles the layout, message animation, typing effect, text timing, and final MP4 render for you.",
+      "typingStartFrame": 77,
+      "typingFrames": 22,
+      "revealStartFrame": 99,
+      "revealFrames": 24
+    }
+  ],
+  "holdFrames": 24,
+  "durationInFrames": 147,
+  "statusDescription": "Analyzing skill capabilities",
+  "bottomStatusDescription": "Video pipeline ready"
+}
