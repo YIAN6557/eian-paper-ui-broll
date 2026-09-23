@@ -5,7 +5,7 @@
   "distribution": "modular-codex-skill-package",
   "canonicalBuildIdentifier": "sha256:b4e5db6184758e7481aab07e5dd0c544c413f7ad43fabdcc0dd9793310ee7b1b",
   "sourceBaseline": "baseline/eian-paper-ui-broll-t01-t02-t03-canonical-production-validated-skill-construction-validated-2026-09-11.zip",
-  "releasePackageIdentifier": "sha256:68fa004f625f63fbde8586eaed2e51fda5762d30d01919bdaf85438b687fa731",
+  "releasePackageIdentifier": "sha256:217c6d6c0d98ad8c7d6594d6a1c9c260dc45cdb8082b80b5a39285b059325679",
   "packageRoot": ".",
   "included": [
     "formal Skill entrypoint and OpenAI metadata",
@@ -56,11 +56,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "3b8418f5173d779e5b6772fa50ddacbd2553b9a50f13eac3ade901097c57d6fc"
+      "sha256": "56a01f6f873e66ba6364928cbe760cf134eb608f03daddcb6e46c963821d4b19"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256": "a04786ec018e6396fbae09c40732d013be40cd0e8619588465ba1facce262bb2"
+      "sha256": "8bfacf01e4d4422aae95996842b744af92ef2bf6c826c0a8c2076dcce51acc26"
     },
     {
       "path": "SKILL.md",
