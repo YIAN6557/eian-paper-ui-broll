@@ -4,6 +4,22 @@
 
 > A Codex Skill that turns a conversation between a user and an AI into Paper UI motion video using the packaged templates.
 
+## Demo videos
+
+These vertical examples are 1080 × 1920 and approximately 8 seconds long.
+
+### T01 — Reference research console
+
+https://github.com/user-attachments/assets/4cfc1656-0078-4984-bf53-7f178eeb02cd
+
+### T02 — Paper dialogue
+
+https://github.com/user-attachments/assets/e869905a-5ab4-46ac-80b9-b81f386991d1
+
+### T03 — Keyflow
+
+https://github.com/user-attachments/assets/2af88163-67d0-45bd-8e78-8c44f9fd2e20
+
 ## What it does
 
 The Skill preserves the conversation’s meaning and message boundaries, then renders it with a template from the package’s enabled V1 registry. It does not rewrite or merge messages. The registry defines the available templates and supported aspect ratios.

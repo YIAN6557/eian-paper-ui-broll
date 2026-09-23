@@ -4,6 +4,22 @@
 
 > 一个将用户与 AI 的对话制作成 Paper UI 动效视频的 Codex Skill，使用包内模板。
 
+## 演示视频
+
+以下竖屏成片分辨率为 1080 × 1920，时长约 8 秒。
+
+### T01 — Reference research console
+
+https://github.com/user-attachments/assets/4cfc1656-0078-4984-bf53-7f178eeb02cd
+
+### T02 — Paper dialogue
+
+https://github.com/user-attachments/assets/e869905a-5ab4-46ac-80b9-b81f386991d1
+
+### T03 — Keyflow
+
+https://github.com/user-attachments/assets/2af88163-67d0-45bd-8e78-8c44f9fd2e20
+
 ## 功能简介
 
 Skill 保留对话含义和消息边界，并使用包内当前启用的 V1 注册模板进行渲染。它不会改写或合并消息。可用模板和支持的画面比例以模板注册表为准。
